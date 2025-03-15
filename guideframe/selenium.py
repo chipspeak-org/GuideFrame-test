@@ -143,7 +143,7 @@ def open_link_in_new_tab(driver, href):
         driver.execute_script(f"window.open('{href}', '_blank');")
         
         # Switch to the newly opened tab
-        # driver.switch_to.window(driver.window_handles[-1])
+        driver.switch_to.window(driver.window_handles[-1])
     except Exception as e:
         print(f"Error opening link '{href}' in a new tab: {e}")
         raise
