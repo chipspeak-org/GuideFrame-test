@@ -13,7 +13,7 @@ def selenium_automation_tests():
         # Set window size and navigate to URL
         set_window_size(driver)
         open_url(driver, "https://magento.softwaretestingboard.com/")
-        time.sleep(2)
+        time.sleep(5)
 
         # Clicking the agree button for the privacy policy
         click_button_by_span_text(driver, "AGREE")
