@@ -13,10 +13,7 @@ def selenium_automation_tests():
         # Set window size and navigate to URL
         set_window_size(driver)
         open_url(driver, "https://magento.softwaretestingboard.com/")
-        time.sleep(5)
-
-        # Clicking the agree button for the privacy policy
-        click_button_by_span_text(driver, "AGREE")
+        time.sleep(2)
 
         # Click on the 'Sign In' link
         click_element(driver, ".authorization-link > a")
@@ -75,18 +72,19 @@ def selenium_automation_tests():
         # Click the "Sign Out" button
         click_element(driver, "a[href='https://magento.softwaretestingboard.com/customer/account/logout/']")
         time.sleep(2)
+        
+        print("Test Passed ✅")  # Print the success message
+        exit_code = 0  # Set the exit code to 0
 
     except Exception as e:
         # print the failure message
         print(f"Test Failed ❌: {str(e)}")
+        exit_code = 1  # Set the exit code to 1
         raise
-
+    
     finally:
-        # Close the browser
         driver.quit()
-        # Print the success message
-        print("Test Passed ✅")
-        exit(0)
+        exit(exit_code)
 
 # Run the automation test
 if __name__ == "__main__":
