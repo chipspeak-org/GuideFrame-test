@@ -19,7 +19,10 @@ jobs:
           xvfb \
           chromium-driver \
           chromium-browser
-          pip install guideframe
+          pip install selenium \
+          ffmpeg-python \
+          mutagen \
+          gTTS
     # Run the main automation script
     - name: Run Automation Test with Virtual Display
       run: |
