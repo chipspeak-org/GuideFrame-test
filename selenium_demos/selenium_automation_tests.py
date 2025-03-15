@@ -15,8 +15,10 @@ def selenium_automation_tests():
         open_url(driver, "https://magento.softwaretestingboard.com/")
         time.sleep(5)
 
+        '''
         # Clicking the agree button for the privacy policy
         click_button_by_span_text(driver, "AGREE")
+        '''
 
         # Click on the 'Sign In' link
         click_element(driver, ".authorization-link > a")
