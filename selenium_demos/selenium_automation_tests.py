@@ -1,5 +1,5 @@
-from guideframe_selenium import *
-from guideframe_utils import get_env_settings  # Importing the guide_step and get_env_settings functions from guideframe_utils.py
+from guideframe.selenium import *
+from guideframe.utils import get_env_settings  # Importing the guide_step and get_env_settings functions from guideframe_utils.py
 import time
 
 # Setup the driver and perform automation tests
