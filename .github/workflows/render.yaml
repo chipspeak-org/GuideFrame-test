@@ -19,7 +19,10 @@ jobs:
           xvfb \
           chromium-driver \
           chromium-browser
-          pip install guideframe
+          pip install selenium \
+          ffmpeg-python \
+          mutagen \
+          gTTS
     # Run the main script (starting the virtual display first)
     - name: Run Main Script with Display started
       run: |
